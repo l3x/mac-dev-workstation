@@ -16,7 +16,7 @@ apps=(
 )
 
 # Already installed
-    google-chrome
+#    google-chrome
 
 # Not installed but maybe later
 #   caffeine

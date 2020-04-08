@@ -68,6 +68,6 @@ function configure_docker()
 	docker run hello-world
 	"
 }
-configure_docker
+[ -z $SKIP_DOCKER ] || configure_docker
 
 brew cleanup
