@@ -7,7 +7,6 @@ apps=(
     dash
     github
     iterm2
-    slack
     sourcetree
     vlc
     vscodium
@@ -15,6 +14,7 @@ apps=(
 
 # Already installed
 #    google-chrome
+#    slack
 
 # Apps failed with error => hdiutil: attach failed - no mountable file systems
 #   jetbrains-toolbox
@@ -42,8 +42,9 @@ apps=(
 
 
 # Install apps to /Applications, rather than default location of /Users/$user/Applications
+# The --force parameter gets us past the Error: It seems there is already an App at '/Applications/Slack.app'
 # Installing Cask Apps...
-brew cask install $HOMEBREW_CASK_OPTS --force ${apps[@]}
+brew cask install $HOMEBREW_CASK_OPTS ${apps[@]}
 
 apps=(
     betterzip
