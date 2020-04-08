@@ -22,24 +22,24 @@ apps=(
 )
 
 # Not installed but maybe later
-    caffeine
-    charles
-    cheatsheet
-    copyq
-    dropbox
-    evernote
-    google-drive
-    google-hangouts
-    heroku-toolbelt
-    java
-    little-snitch
-    macvim
-    shimo
-    skype
-    sublime-text
-    transmit
-    vagrant
-    visual-studio-code
+#   caffeine
+#   charles
+#   cheatsheet
+#   copyq
+#   dropbox
+#   evernote
+#   google-drive
+#   google-hangouts
+#   heroku-toolbelt
+#   java
+#   little-snitch
+#   macvim
+#   shimo
+#   skype
+#   sublime-text
+#   transmit
+#   vagrant
+#   visual-studio-code
 
 # Install apps to /Applications, rather than default location of /Users/$user/Applications
 echo 'Installing Cask Apps...'
