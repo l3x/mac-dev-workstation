@@ -41,7 +41,6 @@ binaries=(
 
 # Installing binaries...
 brew install ${binaries[@]}
-brew cleanup
 
 function configure_docker()
 {
@@ -54,7 +53,7 @@ function configure_docker()
 	echo 'Install VirtuaBox from DMG download: https://www.virtualbox.org/wiki/Downloads'
 	echo 'After you have installed VirtuaBox, press Enter'; read line
 	brew install docker-compose
-	ignore_errors docker-machine rm default
+	ignore_errors docker-machine rm default -y
 	docker-machine create default --driver virtualbox
 	ignore_errors docker-machine create --driver virtualbox default
 	docker-machine env default
@@ -70,3 +69,5 @@ function configure_docker()
 	"
 }
 configure_docker
+
+brew cleanup
