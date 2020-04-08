@@ -18,7 +18,9 @@ apps=(
 #   jetbrains-toolbox
 #   vlc
 #   vscodium
+## Quick Look Plugins:
 #   quicklook-csv
+#   suspicious-package
 
 # Not installed but maybe later
 #   caffeine
@@ -54,7 +56,6 @@ apps=(
     qlprettypatch
     qlstephen
     quicklook-json
-    suspicious-package
     webpquicklook
 )
 
