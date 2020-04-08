@@ -70,7 +70,9 @@ apps=(
 )
 
 # Installing taps...
-brew tap ${apps[@]}
+echo "$apps" | while read line; do
+    brew tap "$line"
+done
 
 brew cleanup
 
