@@ -41,10 +41,9 @@ apps=(
 #   visual-studio-code
 
 
-
 # Install apps to /Applications, rather than default location of /Users/$user/Applications
 # Installing Cask Apps...
-brew cask install $HOMEBREW_CASK_OPTS ${apps[@]}
+brew cask install $HOMEBREW_CASK_OPTS --force ${apps[@]}
 
 apps=(
     betterzip
