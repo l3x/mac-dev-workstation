@@ -47,7 +47,6 @@ function configure_docker()
 	echo 'If you run into errors installing Docker, then reboot and try again.'
 	brew update
 	ignore_errors brew uninstall docker docker-machine docker-compose
-	rm -rf $(brew --cache)
 	brew install docker docker-machine
 	#brew cask install virtualbox
 	echo 'Install VirtuaBox from DMG download: https://www.virtualbox.org/wiki/Downloads'

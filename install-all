@@ -3,6 +3,7 @@
 # If you see an error like the following, then install the app by downloading its .DMG
 # hdiutil: attach failed - no mountable file systems
 
+rm -rf $(brew --cache)
 ./install-xcode-brew
 ./install-casks
 ./install-non-brew-apps
