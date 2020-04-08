@@ -17,6 +17,8 @@ binaries=(
 	bash-completion
 	cask
 	curl
+	docker
+	docker-machine
 	exa
 	git
 	gpg
@@ -33,3 +35,11 @@ binaries=(
 echo 'Installing binaries...'
 brew install ${binaries[@]}
 brew cleanup
+
+function configure_docker()
+{
+	docker-machine create --driver virtualbox default
+	docker-machine env default
+	eval "$(docker-machine env default)"
+}
+configure_docker
