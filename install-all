@@ -1,8 +1,15 @@
 #!/bin/bash -e
 
+function ignore_errors()
+{
+	set +e
+	$("$@")
+	set -e
+}
+
 ./install-xcode-brew
 ./install-casks
-# ./install-non-brew-apps
+./install-non-brew-apps
 
 echo 'Put the following export statements in your bash environment file. Default file is ~/bashrc.'
 echo ''

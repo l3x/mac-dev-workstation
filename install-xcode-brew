@@ -35,13 +35,6 @@ binaries=(
 brew install ${binaries[@]}
 brew cleanup
 
-function ignore_errors()
-{
-	set +e
-	$("$@")
-	set -e
-}
-
 function configure_docker()
 {
 	echo 'If you run into errors installing Docker, then reboot and try again.'
@@ -58,12 +51,11 @@ function configure_docker()
 	eval "$(docker-machine env default)"
 	ignore_errors docker-machine stop default
 	docker-machine start default
-	echo '+ docker-machine env default'
 	docker-machine env default
 	msg="
 	To verify your docker install run the following commands:
 
-	eval "$(docker-machine env default)"
+	eval \"$(docker-machine env default)\"
 	docker run hello-world
 	"
 }

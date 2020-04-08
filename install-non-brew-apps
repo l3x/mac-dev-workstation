@@ -8,4 +8,13 @@ function install_textmate()
     ./configure && ninja
 }
 
-install_textmate
+function install_firefox()
+{
+	msg="
+	Download and install Firefox Developer Edition from https://www.mozilla.org/en-US/firefox/developer/
+	"
+	echo "$msg"
+}
+
+#install_textmate
+install_firefox
