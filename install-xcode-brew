@@ -42,6 +42,7 @@ function configure_docker()
 	set +e
 	brew uninstall docker docker-machine docker-compose
 	set -e
+	rm -rf $(brew --cache)
 	brew install docker docker-machine
 	#brew cask install virtualbox
 	echo 'Install VirtuaBox from DMG download: https://www.virtualbox.org/wiki/Downloads'
@@ -53,5 +54,11 @@ function configure_docker()
 	docker-machine start default
 	echo '+ docker-machine env default'
 	docker-machine env default
+	msg="
+	To verify your docker install run the following commands:
+
+	eval "$(docker-machine env default)"
+	docker run hello-world
+	"
 }
 configure_docker
