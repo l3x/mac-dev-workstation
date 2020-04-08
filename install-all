@@ -12,7 +12,7 @@ rm -rf $(brew --cache)
 
 echo 'Put the following export statements in your bash environment file. Default file is ~/bashrc.'
 echo ''
-cat ./env
+cat ./.env
 echo ''
 
 echo 'Setup your id_rsa keys in ~/.ssh'
