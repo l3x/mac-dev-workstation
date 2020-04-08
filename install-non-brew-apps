@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+function install_textmate()
+{
+    brew install ragel boost multimarkdown hg ninja capnp google-sparsehash libressl
+    git clone --recursive https://github.com/textmate/textmate.git
+    cd textmate
+    ./configure && ninja
+}
+
+install_textmate

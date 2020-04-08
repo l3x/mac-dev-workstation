@@ -1,0 +1,43 @@
+#!/bin/bash -e
+
+if test ! $(which xcodebuild); then
+	echo 'Installing XCode...'
+	sudo xcode-select --install
+fi
+
+if test ! $(which brew); then
+	echo 'Installing homebrew...'
+	/bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)'
+fi
+
+# Update homebrew recipes
+brew update
+
+binaries=(
+	bash-completion
+	cask
+	curl
+	exa
+	git
+	gpg
+	go
+	htop
+	ncdu
+	node
+	screenfetch
+	tree
+	wget
+	yarn
+)
+
+echo 'Installing binaries...'
+brew install ${binaries[@]}
+
+brew cleanup
+
+# homebrew-cask
+
+echo 'Installing homebrew-cask...'
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+brew cleanup
