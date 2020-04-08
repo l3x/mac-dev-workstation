@@ -63,6 +63,16 @@ echo 'Installing Quick Look Plugins...'
 echo 'Notes: In Finder, mark a file and press Space to start Quick Look.'
 brew cask install --appdir='/Applications' ${apps[@]}
 
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+apps=(
+    homebrew/cask-fonts
+    homebrew/cask-versions
+    colindean/fonts-nonfree
+)
+echo 'Installing taps...'
+brew tap ${apps[@]}
+
 brew cleanup
 
 # link Alfred

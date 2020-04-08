@@ -32,12 +32,4 @@ binaries=(
 
 echo 'Installing binaries...'
 brew install ${binaries[@]}
-
-brew cleanup
-
-# homebrew-cask
-
-echo 'Installing homebrew-cask...'
-brew install homebrew/cask/brew-cask
-brew tap homebrew/versions
 brew cleanup
