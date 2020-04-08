@@ -39,7 +39,9 @@ brew cleanup
 function configure_docker()
 {
 	brew update
+	set +e
 	brew uninstall docker docker-machine docker-compose
+	set -e
 	brew install docker docker-machine
 	brew cask install virtualbox
 	brew install docker-compose
