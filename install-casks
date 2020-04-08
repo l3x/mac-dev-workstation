@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
@@ -38,7 +38,7 @@ apps=(
 #   visual-studio-code
 
 # Install apps to /Applications, rather than default location of /Users/$user/Applications
-echo 'Installing Cask Apps...'
+# Installing Cask Apps...
 brew cask install $HOMEBREW_CASK_OPTS ${apps[@]}
 
 apps=(
@@ -53,8 +53,8 @@ apps=(
     webpquicklook
 )
 
-echo 'Installing Quick Look Plugins...'
-echo 'Notes: In Finder, mark a file and press Space to start Quick Look.'
+# Installing Quick Look Plugins...
+# Notes: In Finder, mark a file and press Space to start Quick Look.
 brew cask install $HOMEBREW_CASK_OPTS ${apps[@]}
 
 apps=(
@@ -62,7 +62,8 @@ apps=(
     homebrew/cask-versions
     colindean/fonts-nonfree
 )
-echo 'Installing taps...'
+
+# Installing taps...
 brew tap ${apps[@]}
 
 brew cleanup
