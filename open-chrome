@@ -13,8 +13,10 @@ if [ ! -e $USER_DATA_DIR ]; then
 	mkdir -p ${USER_DATA_DIR}
 fi
 
+EXE_PATH="/Applications/Google Chrome.app/MacOS/Google Chrome"
+
 set -x
-open -a "Google Chrome" "$@" --user-data-dir="$USER_DATA_DIR" 2>&1 &
+"$EXE_PATH" "$@" --user-data-dir="$USER_DATA_DIR" 2>&1 &
 { set +x; } 2>/dev/null
 
 
