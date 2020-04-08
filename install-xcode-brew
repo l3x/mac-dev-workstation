@@ -43,7 +43,9 @@ function configure_docker()
 	brew uninstall docker docker-machine docker-compose
 	set -e
 	brew install docker docker-machine
-	brew cask install virtualbox
+	#brew cask install virtualbox
+	echo 'Install VirtuaBox from DMG download: https://www.virtualbox.org/wiki/Downloads'
+	echo 'After you have installed VirtuaBox, press Enter'; read line
 	brew install docker-compose
 	docker-machine create --driver virtualbox default
 	docker-machine env default

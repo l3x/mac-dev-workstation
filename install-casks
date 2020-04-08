@@ -13,7 +13,6 @@ apps=(
     jetbrains-toolbox
     slack
     sourcetree
-    virtualbox
     vlc
     vscodium
 )
