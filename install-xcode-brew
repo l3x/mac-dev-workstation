@@ -38,6 +38,6 @@ brew cleanup
 # homebrew-cask
 
 echo 'Installing homebrew-cask...'
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+brew install homebrew/cask/brew-cask
+brew tap homebrew/versions
 brew cleanup
