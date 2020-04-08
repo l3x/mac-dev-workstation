@@ -6,7 +6,6 @@ apps=(
     appcleaner
     dash
     github
-    google-chrome
     iterm2
     jdownloader
     jetbrains-toolbox
@@ -15,6 +14,9 @@ apps=(
     vlc
     vscodium
 )
+
+# Already installed
+    google-chrome
 
 # Not installed but maybe later
 #   caffeine
