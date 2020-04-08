@@ -7,7 +7,6 @@ apps=(
     dash
     github
     iterm2
-    jetbrains-toolbox
     slack
     sourcetree
     vlc
@@ -16,6 +15,9 @@ apps=(
 
 # Already installed
 #    google-chrome
+
+# Apps failed with error => hdiutil: attach failed - no mountable file systems
+#   jetbrains-toolbox
 
 # Not installed but maybe later
 #   caffeine
