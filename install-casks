@@ -4,6 +4,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 apps=(
     appcleaner
+    chromium
     dash
     github
     iterm2
