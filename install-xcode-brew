@@ -38,8 +38,16 @@ brew cleanup
 
 function configure_docker()
 {
+	brew update
+	brew uninstall docker docker-machine docker-compose
+	brew install docker docker-machine
+	brew cask install virtualbox
+	brew install docker-compose
 	docker-machine create --driver virtualbox default
 	docker-machine env default
 	eval "$(docker-machine env default)"
+	docker-machine start default
+	echo '+ docker-machine env default'
+	docker-machine env default
 }
 configure_docker
