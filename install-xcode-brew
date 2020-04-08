@@ -1,5 +1,12 @@
 #!/bin/bash -ex
 
+function ignore_errors()
+{
+	set +e
+	$("$@")
+	set -e
+}
+
 if test ! $(which xcodebuild); then
 	echo 'Installing XCode...'
 	sudo xcode-select --install

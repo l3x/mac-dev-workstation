@@ -1,12 +1,5 @@
 #!/bin/bash -e
 
-function ignore_errors()
-{
-	set +e
-	$("$@")
-	set -e
-}
-
 ./install-xcode-brew
 ./install-casks
 ./install-non-brew-apps
