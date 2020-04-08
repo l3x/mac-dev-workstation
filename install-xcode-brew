@@ -79,7 +79,7 @@ function configure_rbenv()
 		rbenv local 1.9.3-p551
 }
 
-[ -z $SKIP_DOCKER ] || configure_docker
-[ -z $SKIP_RBENV ] || configure_rbenv
+[ "$SKIP_DOCKER" != "true" ] || configure_docker
+[ "$SKIP_RBENV" != "true" ] || configure_rbenv
 
 brew cleanup
