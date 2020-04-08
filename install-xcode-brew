@@ -35,20 +35,25 @@ binaries=(
 brew install ${binaries[@]}
 brew cleanup
 
+function ignore_errors()
+{
+	set +e
+	$("$1 $@")
+	set -e
+}
+
 function configure_docker()
 {
 	echo 'If you run into errors installing Docker, then reboot and try again.'
 	brew update
-	set +e
-	brew uninstall docker docker-machine docker-compose
-	set -e
+	ignore_errors brew uninstall docker docker-machine docker-compose
 	rm -rf $(brew --cache)
 	brew install docker docker-machine
 	#brew cask install virtualbox
 	echo 'Install VirtuaBox from DMG download: https://www.virtualbox.org/wiki/Downloads'
 	echo 'After you have installed VirtuaBox, press Enter'; read line
 	brew install docker-compose
-	docker-machine create --driver virtualbox default
+	ignore_errors docker-machine create --driver virtualbox default
 	docker-machine env default
 	eval "$(docker-machine env default)"
 	docker-machine start default
