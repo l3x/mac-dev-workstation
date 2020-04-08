@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
-# Everyone has different preferences of apps.
-# This is a list of stuff I usually install
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 apps=(
     appcleaner
@@ -42,7 +41,7 @@ apps=(
 
 # Install apps to /Applications, rather than default location of /Users/$user/Applications
 echo 'Installing Cask Apps...'
-brew cask install --appdir='/Applications' ${apps[@]}
+brew cask install $HOMEBREW_CASK_OPTS ${apps[@]}
 
 apps=(
     betterzip
@@ -58,10 +57,8 @@ apps=(
 
 echo 'Installing Quick Look Plugins...'
 echo 'Notes: In Finder, mark a file and press Space to start Quick Look.'
-brew cask install --appdir='/Applications' ${apps[@]}
+brew cask install $HOMEBREW_CASK_OPTS ${apps[@]}
 
-
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 apps=(
     homebrew/cask-fonts
     homebrew/cask-versions
