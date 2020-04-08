@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# To skip install of docker (assuming its alread installed), run the:  SKIP_DOCKER=true ./install-all
+
 # If you see an error like the following, then install the app by downloading its .DMG
 # hdiutil: attach failed - no mountable file systems
 
