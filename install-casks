@@ -4,7 +4,6 @@
 # This is a list of stuff I usually install
 
 apps=(
-    alfred
     appcleaner
     dash
     docker
@@ -72,8 +71,5 @@ echo 'Installing taps...'
 brew tap ${apps[@]}
 
 brew cleanup
-
-# link Alfred
-brew cask alfred link
 
 echo "$0 $@ done."

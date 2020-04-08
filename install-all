@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
-echo 'First, setup your id_rsa keys in ~/.ssh'
-echo 'Press Enter to continue or CTRL+C to abort';read line
-
 ./install-xcode-brew
 ./install-casks
 ./install-non-brew-apps
@@ -11,3 +8,5 @@ echo 'Put the following export statements in your bash environment file. Default
 echo ''
 cat ./env
 echo ''
+
+echo 'Setup your id_rsa keys in ~/.ssh'
