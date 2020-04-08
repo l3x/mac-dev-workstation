@@ -10,18 +10,16 @@ apps=(
     docker
     firefox
     github
+    google-chrome
     iterm2
     jdownloader
     jetbrains-toolbox
+    slack
     sourcetree
     virtualbox
     vlc
     vscodium
 )
-
-# Already installed:
-    google-chrome
-    slack
 
 # Not installed but maybe later
     caffeine
