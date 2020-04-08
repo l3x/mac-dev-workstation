@@ -1,0 +1,42 @@
+#!/bin/bash -e
+
+USER_PROFILE_NAME=$1
+shift 1
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	# Mac OSX
+	BROWSER_EXE=chrome
+else
+	if lsb_release -a | grep 'Ubuntu'; then
+		BROWSER_EXE=chromium-browser
+	else
+		BROWSER_EXE=chromium
+	fi
+fi
+
+if [ -z $USER_PROFILE_NAME ]; then
+	USER_DATA_DIR=$(temp-dir)
+	echo "Created USER_DATA_DIR: $USER_DATA_DIR"
+else
+	USER_DATA_DIR="${HOME}/.chrome_profiles/$USER_PROFILE_NAME"
+fi
+if [ ! -e $USER_DATA_DIR ]; then
+	mkdir -p ${USER_DATA_DIR}
+fi
+
+# http://stackoverflow.com/questions/17679399/does-disable-web-security-work-in-chrome-anymore
+set -x
+$BROWSER_EXE "$@" --user-data-dir="$USER_DATA_DIR" 2>&1 &
+{ set +x; } 2>/dev/null
+
+exit 0
+
+# -------------------------------------------------------
+#                       Notes
+# -------------------------------------------------------
+
+For details open enter this in the Chrome address bar: chrome://version/
+
+Example:
+man-open-chromium crypto.developers.class@gmail.com
+

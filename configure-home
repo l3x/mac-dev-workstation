@@ -2,3 +2,5 @@
 
 mkdir $HOME/bin
 mkdir $HOME/.chrome_profiles
+
+cp ./open-chrome $HOME/BIN/
