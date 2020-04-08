@@ -7,7 +7,6 @@ apps=(
     dash
     github
     iterm2
-    jdownloader
     jetbrains-toolbox
     slack
     sourcetree
@@ -29,6 +28,7 @@ apps=(
 #   google-hangouts
 #   heroku-toolbelt
 #   java
+#   jdownloader
 #   little-snitch
 #   macvim
 #   shimo
