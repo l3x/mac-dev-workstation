@@ -24,11 +24,14 @@ apps=(
     slack
 
 # Not installed but maybe later
+    caffeine
     charles
+    cheatsheet
     copyq
     dropbox
     evernote
     google-drive
+    google-hangouts
     heroku-toolbelt
     java
     little-snitch
@@ -42,6 +45,22 @@ apps=(
 
 # Install apps to /Applications, rather than default location of /Users/$user/Applications
 echo 'Installing Cask Apps...'
+brew cask install --appdir='/Applications' ${apps[@]}
+
+apps=(
+    betterzip
+    qlcolorcode
+    qlmarkdown
+    qlprettypatch
+    qlstephen
+    quicklook-csv
+    quicklook-json
+    suspicious-package
+    webpquicklook
+)
+
+echo 'Installing Quick Look Plugins...'
+echo 'Notes: In Finder, mark a file and press Space to start Quick Look.'
 brew cask install --appdir='/Applications' ${apps[@]}
 
 brew cleanup
