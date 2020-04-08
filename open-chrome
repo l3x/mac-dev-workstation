@@ -16,7 +16,7 @@ fi
 EXE_PATH="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 set -x
-"$EXE_PATH" "$@" --user-data-dir="$USER_DATA_DIR" 2>&1 &
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome "$@" --user-data-dir="$USER_DATA_DIR" 2>&1 &
 { set +x; } 2>/dev/null
 
 
