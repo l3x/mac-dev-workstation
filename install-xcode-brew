@@ -38,7 +38,7 @@ brew cleanup
 function ignore_errors()
 {
 	set +e
-	$("$1 $@")
+	$("$@")
 	set -e
 }
 
