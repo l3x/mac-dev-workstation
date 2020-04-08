@@ -7,6 +7,7 @@ function ignore_errors()
 	set -e
 }
 
+
 if test ! $(which xcodebuild); then
 	echo 'Installing XCode...'
 	sudo xcode-select --install
@@ -53,9 +54,11 @@ function configure_docker()
 	echo 'Install VirtuaBox from DMG download: https://www.virtualbox.org/wiki/Downloads'
 	echo 'After you have installed VirtuaBox, press Enter'; read line
 	brew install docker-compose
+	ignore_errors docker-machine rm default
+	docker-machine create default --driver virtualbox
 	ignore_errors docker-machine create --driver virtualbox default
 	docker-machine env default
-	eval "$(docker-machine env default)"
+	eval $(docker-machine env default)
 	ignore_errors docker-machine stop default
 	docker-machine start default
 	docker-machine env default
