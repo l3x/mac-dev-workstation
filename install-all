@@ -9,6 +9,7 @@ rm -rf $(brew --cache)
 ./install-xcode-brew
 ./install-casks
 ./install-non-brew-apps
+./configure-home
 
 echo 'Put the following export statements in your bash environment file. Default file is ~/bashrc.'
 echo ''

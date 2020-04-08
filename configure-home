@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
-mkdir $HOME/bin
-mkdir $HOME/.chrome_profiles
+bin_dir=$HOME/bin
+mkdir -p $bin_dir
+mkdir -p $HOME/.chrome_profiles
 
-cp ./open-chrome $HOME/BIN/
+cp ./open-chrome $bin_dir
+chmod +x $bin_dir/*
